@@ -1,0 +1,136 @@
+
+.row {
+    outline: 1px solid red;
+    outline: none !important;
+}
+@media (max-width: 768px) {
+    .big-hero .row {
+        outline: 1px solid purple;
+    }
+}
+
+::selection {
+    background: dodgerblue;
+    color: #fff;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: dodgerblue;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+body {
+    font-family: "HelveticaNeue-Light", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+a {
+    color: #333;
+}
+hr {
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.big-hero {
+    height: 600px;
+    background: url("../images/background.png") no-repeat center center / 100% auto;
+
+    font-family: "HelveticaNeue-Thin", "HelveticaNeue-Light", Helvetica Neue, Helvetica, Arial, sans-serif;
+
+    color: #fff;
+    padding: 100px 0;
+}
+.big-hero a {
+    color: #fff;
+}
+.big-hero .alias {
+    font-size: 24px;
+    line-height:0.7em;
+    text-align: center;
+    height: 20px;
+}
+.big-hero .name {
+    font-size: 50px;
+    line-height: 0.4em;
+    text-align: center;
+    height: 20px;
+}
+.big-hero .title {
+    font-size: 18px;
+    line-height: 0.1em;
+    text-align: center;
+    height: 50px;
+}
+.big-hero .avatar-container {
+    text-align: center;
+    margin: 35px 0 50px;
+}
+.big-hero .avatar {
+    height: 200px;
+}
+.big-hero .links {
+    text-align: center;
+}
+.big-hero .links li {
+    /*outline: 1px solid green;*/
+    margin-bottom: 10px;
+}
+.big-hero .links li a {
+    font-size: 18px;
+    padding: 5px 30px 5px 20px;
+    border-right: 1px solid #fff;
+    /*outline: 1px solid blue;*/
+}
+.big-hero .links li:last-child a {
+    border: 0;
+}
+.content-block {
+}
+.content-block .side-column {
+    padding: 0 40px;
+    text-align: right;
+    background-color: #fff;
+
+}
+.content-block .side-column a {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+ }
+.content-block .side-column h2 {
+    font-size: 13px;
+    margin-top: 48px;
+    margin-bottom: 15px;
+    line-height: 1.1em;
+    font-weight: normal;
+}
+.content-block .main-column {}
+.content-block .main-column  hr {
+    margin: 20px 0 0px;
+}
+.content-block .content-block-row {
+    padding: 20px 20px 10px;
+}
+.content-block .content-block-row h3 {
+    font-size: 22px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.content-block .content-block-row h3 a {
+    color: #333;
+}
+.content-block .content-block-row p {
+    font-size: 17px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 20px;
+}
+.footer a {
+    text-decoration: underline;
+    font-weight: bold;
+}
