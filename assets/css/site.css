@@ -1,7 +1,5 @@
 
 .row {
-    outline: 1px solid red;
-    outline: none !important;
 }
 
 ::selection {
@@ -14,7 +12,6 @@
     color: #fff;
     text-shadow: none;
 }
-
 
 body {
     font-family: "HelveticaNeue-Light", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -40,6 +37,7 @@ hr {
     color: #fff;
     padding: 100px 0;
 }
+
 .big-hero a {
     color: #fff;
 }
@@ -55,7 +53,7 @@ hr {
     text-align: center;
     height: 20px;
 }
-.big-hero .title {
+.big-hero .blurb {
     font-size: 18px;
     line-height: 1em;
     text-align: center;
@@ -85,6 +83,8 @@ hr {
 }
 
 .content-block {
+
+    padding: 0 15px 15px;
 }
 .content-block .side-column {
     padding: 0 40px;
@@ -151,4 +151,82 @@ hr {
 .footer a {
     text-decoration: underline;
     font-weight: bold;
+}
+
+/* Parallax base styles
+ --------------------------------------------- */
+
+.parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+
+    padding: 0;
+}
+
+.parallax__group {
+    /*outline: 1px solid red;*/
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/**
+scale = 1 + (translateZ * -1) / perspective)
+*/
+.parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+}
+
+.parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+}
+
+.parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+
+}
+
+.parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+}
+
+.content-parallax-group {
+    background-color: white;
+    z-index: 2;
+}
+
+.big-hero-parallax-group {
+    height: 600px;
+    z-index: 1;
+}
+
+.big-hero--base {
+    top: 50px;
+}
+.big-hero--back {
+    background: url("../images/background.png") no-repeat center center / 100% auto;
+    top: -40px;
+
 }
